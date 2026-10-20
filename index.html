@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ondřej Zajíček · oondraa</title>
+<meta name="description" content="Osobní portfolio Ondřeje Zajíčka (oondraa). Software, který chci sám používat: OpenSISAKHK, OZBEAT, Spotify Live Wrapped a další.">
+<link rel="canonical" href="https://oondraa.pages.dev/">
+<meta name="theme-color" content="#e9e9ec">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ondřej Zajíček · oondraa">
+<meta property="og:description" content="Software, který chci sám používat.">
+<meta property="og:url" content="https://oondraa.pages.dev/">
+<meta property="og:image" content="https://oondraa.pages.dev/assets/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/geist-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add("js")</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Ondřej Zajíček",
+  "alternateName": "oondraa",
+  "url": "https://oondraa.pages.dev/",
+  "email": "o.zajicek12@gmail.com",
+  "worksFor": { "@type": "Organization", "name": "OZDIGITAL", "url": "https://ozdigital.pages.dev/" },
+  "sameAs": [
+    "https://github.com/oondraa",
+    "https://www.linkedin.com/in/ond%C5%99ej-zaj%C3%AD%C4%8Dek-5605893b8/"
+  ]
+}
+</script>
+</head>
+<body>
+  <div class="loader" aria-hidden="true"><span class="loader-num">0</span></div>
+  <div class="cursor" aria-hidden="true"><span class="cursor-label"></span></div>
+
+  <header class="nav">
+    <a href="#top" class="logo" aria-label="oondraa, na začátek">oondraa<span class="dot">.</span></a>
+    <nav aria-label="Hlavní">
+      <a href="#work" data-i18n="navWork">Práce</a>
+      <a href="#lab" data-i18n="navLab">V dílně</a>
+      <a href="#about" data-i18n="navAbout">O mně</a>
+    </nav>
+    <div class="nav-end">
+      <button class="lang" type="button" aria-label="Switch to English">EN</button>
+      <a href="#contact" class="pill" data-i18n="navTalk">Napiš mi</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <canvas class="hero-gl" aria-hidden="true"></canvas>
+      <div class="hero-inner">
+        <p class="hero-kicker"><span class="mask"><span data-i18n="heroKicker">Vývojář a designér · Hradec Králové</span></span></p>
+        <h1 class="hero-title">
+          <span class="mask"><span>Ondřej</span></span>
+          <span class="mask"><span>Zajíček<span class="accent">.</span></span></span>
+        </h1>
+        <div class="hero-foot">
+          <p class="hero-lede"><span class="mask"><span data-i18n="heroLede">Dělám software, který chci sám používat.</span></span></p>
+          <a href="#work" class="scroll-cue" aria-label="Posunout na projekty"><span data-i18n="heroScroll">Scrolluj</span><i></i></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="statement" id="about">
+      <p class="statement-text" data-words data-i18n="statement">Jsem Ondřej, ale na internetu spíš oondraa. Vedu studio OZDIGITAL a po večerech stavím vlastní věci: appky pro spolužáky, hudební vizualizéry v Rustu i neuronovou síť, která se učí mluvit.</p>
+      <div class="statement-meta">
+        <p data-i18n="aboutMeta">Navrhuji i programuji. Od nápadu přes design až po spuštění, většinou sám a většinou v noci.</p>
+        <a href="https://ozdigital.pages.dev/" target="_blank" rel="noopener" class="link-arrow" data-cursor="OZDIGITAL"><span data-i18n="aboutStudio">Weby na zakázku dělám pod OZDIGITAL</span> ↗</a>
+      </div>
+    </section>
+
+    <section class="work" id="work">
+      <div class="sec-head">
+        <h2 class="sec-title"><span class="mask"><span data-i18n="workTitle">Vybraná práce</span></span></h2>
+        <span class="sec-count">(04)</span>
+      </div>
+
+      <div class="projects">
+        <article class="project project-xl">
+          <a href="https://oondraa.github.io/OpenSISAKHK/" target="_blank" rel="noopener" class="project-media" data-cursor-key="cursorOpen" style="--tint:#f0a560">
+            <video data-src="assets/sis-promo-720.mp4" poster="assets/sis-poster.jpg" muted loop playsinline preload="none" aria-label="Ukázka OpenSISAKHK"></video>
+          </a>
+          <div class="project-info">
+            <div class="project-name">
+              <img src="assets/sis-icon.svg" alt="" width="40" height="40">
+              <h3>OpenSISAKHK</h3>
+              <span class="project-year">2026</span>
+            </div>
+            <p data-i18n="sisDesc">Kyberna v jedné appce. Rozvrh se suplováním, známky s výpočtem, co potřebuješ z další písemky, absence s hlídáním 30% hranice, volné učebny, obědy a notifikace, když škola ve tři ráno přepíše rozvrh.</p>
+            <ul class="tags"><li>TypeScript</li><li>PWA</li><li>Cloudflare Workers</li></ul>
+            <div class="project-links">
+              <a href="https://opensisakhk.opensisakhk.workers.dev" target="_blank" rel="noopener" data-i18n="sisOpen">Otevřít appku ↗</a>
+              <a href="https://github.com/oondraa/OpenSISAKHK" target="_blank" rel="noopener">GitHub ↗</a>
+            </div>
+            <p class="fine" data-i18n="sisNote">Neoficiální studentský projekt, není spojený se školou ani s autory SIS.</p>
+          </div>
+        </article>
+
+        <article class="project project-r">
+          <a href="https://oondraa.github.io/OZBEAT/" target="_blank" rel="noopener" class="project-media" data-cursor-key="cursorOpen" style="--tint:#6b4a42">
+            <video data-src="assets/ozbeat-promo-720.mp4" poster="assets/ozbeat-poster.jpg" muted loop playsinline preload="none" aria-label="Ukázka OZBEAT"></video>
+          </a>
+          <div class="project-info">
+            <div class="project-name">
+              <img src="assets/ozbeat-icon.png" alt="" width="40" height="40">
+              <h3>OZBEAT</h3>
+              <span class="project-year">2026</span>
+            </div>
+            <p data-i18n="ozbDesc">Hudební vizualizér pro Windows. Obal alba a fotky interpreta jako pohyblivé pozadí, text synchronizovaný po řádcích a vizuály, které dýchají se zvukem. Spotify, prohlížeč i reproduktory BluOS. Funguje i jako spořič.</p>
+            <ul class="tags"><li>Rust</li><li>Windows</li><li data-i18n="tagSaver">Spořič obrazovky</li></ul>
+            <div class="project-links">
+              <a href="https://oondraa.github.io/OZBEAT/" target="_blank" rel="noopener" data-i18n="linkProject">Web projektu ↗</a>
+              <a href="https://github.com/oondraa/OZBEAT/releases/latest/download/OZBEAT.exe" data-i18n="ozbDownload">Stáhnout pro Windows ↓</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project project-l">
+          <a href="https://oondraa.github.io/spotify-live-wrapped/" target="_blank" rel="noopener" class="project-media" data-cursor-key="cursorOpen" style="--tint:#1db954">
+            <video data-src="assets/slw-promo-720.mp4" poster="assets/slw-poster.jpg" muted loop playsinline preload="none" aria-label="Ukázka Spotify Live Wrapped"></video>
+          </a>
+          <div class="project-info">
+            <div class="project-name">
+              <img src="assets/spotify-live-wrapped-icon.png" alt="" width="40" height="40">
+              <h3>Spotify Live Wrapped</h3>
+            </div>
+            <p data-i18n="slwDesc">Wrapped každý den, ne jen v prosinci. Napojí se na Spotify a celý rok drží aktuální statistiky poslechu: nejhranější skladby, interprety a žánry. Běží na tvém vlastním stroji.</p>
+            <ul class="tags"><li>Self-hosted</li><li>Spotify API</li><li data-i18n="tagCharts">Grafy</li></ul>
+            <div class="project-links">
+              <a href="https://oondraa.github.io/spotify-live-wrapped/" target="_blank" rel="noopener" data-i18n="linkProject">Web projektu ↗</a>
+              <a href="https://github.com/oondraa/spotify-live-wrapped" target="_blank" rel="noopener">GitHub ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project project-r project-sm">
+          <a href="https://github.com/oondraa/Access-date-changer" target="_blank" rel="noopener" class="project-media" data-cursor-key="cursorOpen" style="--tint:#a4373a">
+            <video data-src="assets/adc-promo-720.mp4" poster="assets/adc-poster.jpg" muted loop playsinline preload="none" aria-label="Ukázka ADC"></video>
+          </a>
+          <div class="project-info">
+            <div class="project-name">
+              <h3>ADC: Access Date Changer</h3>
+            </div>
+            <p data-i18n="adcDesc">Malá samostatná utilita pro Windows, která mění časová razítka (vytvoření, úprava, přístup) databází Microsoft Access .accdb a .mdb.</p>
+            <ul class="tags"><li>Windows</li><li data-i18n="tagUtil">Utilita</li></ul>
+            <div class="project-links">
+              <a href="https://github.com/oondraa/Access-date-changer" target="_blank" rel="noopener">GitHub ↗</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="marquee" aria-hidden="true">
+      <div class="marquee-track"><span>oondraa — software — design — oondraa — software — design — </span><span>oondraa — software — design — oondraa — software — design — </span></div>
+    </section>
+
+    <section class="lab" id="lab">
+      <div class="sec-head">
+        <h2 class="sec-title"><span class="mask"><span data-i18n="labTitle">V dílně</span></span></h2>
+        <p class="sec-lede" data-i18n="labLede">Na čem dělám teď. Některé názvy zatím schovávám.</p>
+      </div>
+      <ol class="lab-list">
+        <li class="lab-row">
+          <span class="lab-n">01</span>
+          <h3 data-i18n="llmName">Neuronová síť, která není LLM</h3>
+          <p data-i18n="llmDesc">Můj největší projekt. Živá neuronová síť, která se učí mluvit jako malé dítě: posloucháním a opakováním. Žádný dataset ani klasický trénink. Učení řídí simulovaná chemie mozku a každý neuron je vidět naživo.</p>
+          <span class="lab-state" data-i18n="stateActive">Rozpracováno</span>
+        </li>
+        <li class="lab-row">
+          <span class="lab-n">02</span>
+          <h3>ADEA <span class="redact" aria-label="skrytý název"></span></h3>
+          <p data-i18n="adeaDesc">Hardwarový projekt postavený na mikrokontrolerech. Detaily, až to bude hotové.</p>
+          <span class="lab-state" data-i18n="stateHw">Hardware</span>
+        </li>
+        <li class="lab-row">
+          <span class="lab-n">03</span>
+          <h3>OCR <span class="redact" aria-label="skrytý název"></span></h3>
+          <p data-i18n="ocrDesc">Převede na text cokoliv, čitelné i nečitelné.</p>
+          <span class="lab-state" data-i18n="stateActive">Rozpracováno</span>
+        </li>
+        <li class="lab-row">
+          <span class="lab-n">04</span>
+          <h3>Linux connector <span class="redact" aria-label="skrytý název"></span></h3>
+          <p data-i18n="linuxDesc">Konektor, díky kterému je Linux použitelnější.</p>
+          <span class="lab-state" data-i18n="stateActive">Rozpracováno</span>
+        </li>
+      </ol>
+    </section>
+  </main>
+
+  <footer class="contact" id="contact">
+    <p class="contact-kicker" data-i18n="contactKicker">Máš nápad, práci nebo jen otázku?</p>
+    <a href="mailto:o.zajicek12@gmail.com" class="contact-big" data-cursor-key="cursorMail">
+      <span class="mask"><span data-i18n="contactBig">Napiš mi</span></span>
+      <span class="contact-arrow" aria-hidden="true">→</span>
+    </a>
+    <a href="mailto:o.zajicek12@gmail.com" class="contact-mail">o.zajicek12@gmail.com</a>
+    <div class="contact-foot">
+      <ul class="socials">
+        <li><a href="https://github.com/oondraa" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/ond%C5%99ej-zaj%C3%AD%C4%8Dek-5605893b8/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://ozdigital.pages.dev/" target="_blank" rel="noopener">OZDIGITAL</a></li>
+      </ul>
+      <p class="copy">© 2026 Ondřej Zajíček</p>
+    </div>
+    <div class="contact-word" aria-hidden="true">oondraa</div>
+  </footer>
+
+  <script src="vendor/gsap.min.js" defer></script>
+  <script src="vendor/ScrollTrigger.min.js" defer></script>
+  <script src="vendor/lenis.min.js" defer></script>
+  <script src="hero.js" defer></script>
+  <script src="main.js" defer></script>
+</body>
+</html>
