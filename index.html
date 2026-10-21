@@ -3,16 +3,29 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ondřej Zajíček · oondraa</title>
-<meta name="description" content="Osobní portfolio Ondřeje Zajíčka (oondraa). Software, který chci sám používat: OpenSISAKHK, OZBEAT, Spotify Live Wrapped a další.">
+<title>Ondřej Zajíček – vývojář a designér z Hradce Králové | oondraa</title>
+<meta name="description" content="Ondřej Zajíček (oondraa) je vývojář a designér z Hradce Králové. Dělá webové a desktopové aplikace jako OpenSISAKHK, OZBEAT a Spotify Live Wrapped a weby na zakázku pod OZDIGITAL.">
+<meta name="author" content="Ondřej Zajíček">
+<meta name="robots" content="index, follow, max-image-preview:large">
 <link rel="canonical" href="https://oondraa.pages.dev/">
 <meta name="theme-color" content="#0c0c10">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Ondřej Zajíček · oondraa">
-<meta property="og:description" content="Software, který chci sám používat.">
+<meta property="og:type" content="profile">
+<meta property="og:site_name" content="oondraa">
+<meta property="og:locale" content="cs_CZ">
+<meta property="og:title" content="Ondřej Zajíček – vývojář a designér z Hradce Králové">
+<meta property="og:description" content="Dělám software, který chci sám používat. OpenSISAKHK, OZBEAT, Spotify Live Wrapped a další.">
 <meta property="og:url" content="https://oondraa.pages.dev/">
 <meta property="og:image" content="https://oondraa.pages.dev/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Ondřej Zajíček · oondraa">
+<meta property="profile:first_name" content="Ondřej">
+<meta property="profile:last_name" content="Zajíček">
+<meta property="profile:username" content="oondraa">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ondřej Zajíček – vývojář a designér z Hradce Králové">
+<meta name="twitter:description" content="Dělám software, který chci sám používat.">
+<meta name="twitter:image" content="https://oondraa.pages.dev/assets/og.jpg">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preload" href="fonts/geist-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="style.css">
@@ -20,15 +33,77 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Ondřej Zajíček",
-  "alternateName": "oondraa",
-  "url": "https://oondraa.pages.dev/",
-  "email": "o.zajicek12@gmail.com",
-  "worksFor": { "@type": "Organization", "name": "OZDIGITAL", "url": "https://ozdigital.pages.dev/" },
-  "sameAs": [
-    "https://github.com/oondraa",
-    "https://www.linkedin.com/in/ond%C5%99ej-zaj%C3%AD%C4%8Dek-5605893b8/"
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://oondraa.pages.dev/#website",
+      "url": "https://oondraa.pages.dev/",
+      "name": "oondraa",
+      "alternateName": "Ondřej Zajíček",
+      "inLanguage": "cs",
+      "publisher": { "@id": "https://oondraa.pages.dev/#person" }
+    },
+    {
+      "@type": "ProfilePage",
+      "@id": "https://oondraa.pages.dev/#profile",
+      "url": "https://oondraa.pages.dev/",
+      "name": "Ondřej Zajíček – vývojář a designér z Hradce Králové",
+      "inLanguage": "cs",
+      "dateModified": "2026-10-21",
+      "isPartOf": { "@id": "https://oondraa.pages.dev/#website" },
+      "mainEntity": { "@id": "https://oondraa.pages.dev/#person" }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://oondraa.pages.dev/#person",
+      "name": "Ondřej Zajíček",
+      "givenName": "Ondřej",
+      "familyName": "Zajíček",
+      "alternateName": ["oondraa", "Ondrej Zajicek", "Ondra Zajíček"],
+      "url": "https://oondraa.pages.dev/",
+      "email": "mailto:o.zajicek12@gmail.com",
+      "jobTitle": "Vývojář a designér",
+      "description": "Vývojář a designér z Hradce Králové. Webové a desktopové aplikace, weby na zakázku pod OZDIGITAL.",
+      "homeLocation": { "@type": "Place", "name": "Hradec Králové", "address": { "@type": "PostalAddress", "addressLocality": "Hradec Králové", "addressRegion": "Královéhradecký kraj", "addressCountry": "CZ" } },
+      "address": { "@type": "PostalAddress", "addressLocality": "Hradec Králové", "addressRegion": "Královéhradecký kraj", "addressCountry": "CZ" },
+      "knowsAbout": ["Vývoj webových aplikací", "UI/UX design", "TypeScript", "Rust", "WebGL", "Cloudflare Workers", "Neuronové sítě"],
+      "worksFor": { "@type": "Organization", "name": "OZDIGITAL", "url": "https://ozdigital.pages.dev/" },
+      "sameAs": [
+        "https://github.com/oondraa",
+        "https://www.linkedin.com/in/ond%C5%99ej-zaj%C3%AD%C4%8Dek-5605893b8/"
+      ]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "OpenSISAKHK",
+      "url": "https://oondraa.github.io/OpenSISAKHK/",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "Web",
+      "author": { "@id": "https://oondraa.pages.dev/#person" }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "OZBEAT",
+      "url": "https://oondraa.github.io/OZBEAT/",
+      "applicationCategory": "MultimediaApplication",
+      "operatingSystem": "Windows",
+      "author": { "@id": "https://oondraa.pages.dev/#person" }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Spotify Live Wrapped",
+      "url": "https://oondraa.github.io/spotify-live-wrapped/",
+      "applicationCategory": "MultimediaApplication",
+      "author": { "@id": "https://oondraa.pages.dev/#person" }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "ADC: Access Date Changer",
+      "url": "https://github.com/oondraa/Access-date-changer",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Windows",
+      "author": { "@id": "https://oondraa.pages.dev/#person" }
+    }
   ]
 }
 </script>
@@ -75,7 +150,7 @@
     </section>
 
     <section class="statement" id="about">
-      <p class="statement-text" data-words data-i18n="statement">Jsem Ondřej, ale na internetu spíš oondraa. Vedu studio OZDIGITAL a po večerech stavím vlastní věci: appky pro spolužáky, hudební vizualizéry v Rustu i neuronovou síť, která se učí mluvit.</p>
+      <p class="statement-text" data-words data-i18n="statement">Jsem Ondřej Zajíček, ale na internetu spíš oondraa. Vedu studio OZDIGITAL a po večerech stavím vlastní věci: appky pro spolužáky, hudební vizualizéry v Rustu i neuronovou síť, která se učí mluvit.</p>
       <div class="statement-meta">
         <p data-i18n="aboutMeta">Navrhuji i programuji. Od nápadu přes design až po spuštění, většinou sám a většinou v noci.</p>
         <a href="https://ozdigital.pages.dev/" target="_blank" rel="noopener" class="link-arrow" data-cursor="OZDIGITAL"><span data-i18n="aboutStudio">Weby na zakázku dělám pod OZDIGITAL</span> ↗</a>

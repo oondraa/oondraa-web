@@ -10,7 +10,7 @@
     heroKicker: "Developer & designer · Hradec Králové",
     heroLede: "I build software I want to use myself.",
     heroScroll: "Scroll",
-    statement: "I'm Ondřej, but online mostly oondraa. I run the OZDIGITAL studio and after hours I build my own things: apps for my classmates, music visualizers in Rust and a neural network that is learning to talk.",
+    statement: "I'm Ondřej Zajíček, but online mostly oondraa. I run the OZDIGITAL studio and after hours I build my own things: apps for my classmates, music visualizers in Rust and a neural network that is learning to talk.",
     aboutMeta: "I design and I code. From the idea through design to launch, mostly alone and mostly at night.",
     aboutStudio: "Client websites live under OZDIGITAL",
     workTitle: "Selected work",
