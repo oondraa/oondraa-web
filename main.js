@@ -20,16 +20,15 @@
     ozbDesc: "A music visualizer for Windows. Cover art and artist photos as a moving background, lyrics synced line by line and visuals that breathe with the sound. Spotify, the browser and BluOS speakers. Also runs as a screensaver.",
     ozbDownload: "Download for Windows ↓",
     linkProject: "Project site ↗",
+    kindWeb: "Web app", kindDesktop: "Desktop app", kindSelfHosted: "Self-hosted service", kindUtil: "Windows utility",
     tagSaver: "Screensaver", tagCharts: "Charts", tagUtil: "Utility",
     slwDesc: "Your Wrapped every day, not just in December. Connects to Spotify and keeps your listening stats (top tracks, artists and genres) up to date all year. Runs on your own machine.",
     adcDesc: "A small standalone Windows utility that changes the timestamps (created, modified, accessed) of Microsoft Access .accdb and .mdb databases.",
     labTitle: "In the lab",
-    labLede: "What I'm working on now. Some names stay hidden for a while.",
+    labLede: "What I'm working on now.",
     llmName: "A neural network that isn't an LLM",
     llmDesc: "My biggest project. A living neural network that learns to speak like a small child: by listening and repeating. No dataset, no classic training. Its learning runs on simulated brain chemistry and you can watch every neuron live.",
     adeaDesc: "A hardware project built around microcontrollers. Details when it's ready.",
-    ocrDesc: "Turns anything into text, readable or not.",
-    linuxDesc: "A connector that makes Linux easier to actually use.",
     stateActive: "In progress", stateHw: "Hardware",
     contactKicker: "Got an idea, a job or just a question?",
     contactBig: "Say hi",
@@ -111,12 +110,19 @@
       });
       el.addEventListener("pointerleave", () => cursor.classList.remove("is-big"));
     });
-    const dark = document.querySelector(".contact");
-    new IntersectionObserver(([e]) => cursor.classList.toggle("on-dark", e.isIntersecting), { rootMargin: "0px 0px -100% 0px" }).observe(dark);
   }
+
+  /* ---------- Nav and cursor turn light over the dark hero and footer ---------- */
+  const darkNow = new Set();
+  const darkIO = new IntersectionObserver((entries) => {
+    entries.forEach((e) => (e.isIntersecting ? darkNow.add(e.target) : darkNow.delete(e.target)));
+    nav.classList.toggle("on-dark", darkNow.size > 0);
+    cursor.classList.toggle("on-dark", darkNow.size > 0);
+  }, { rootMargin: "0px 0px -100% 0px" });
 
   /* ---------- Nav hides on the way down, returns on the way up ---------- */
   const nav = document.querySelector(".nav");
+  document.querySelectorAll(".hero, .contact").forEach((s) => darkIO.observe(s));
   let lastY = 0;
   window.addEventListener("scroll", () => {
     const yNow = window.scrollY;
@@ -157,7 +163,7 @@
   intro
     .to(counter, { v: 100, duration: reduced ? 0.01 : 1.1, ease: "power2.inOut", onUpdate: () => { num.textContent = Math.round(counter.v); } })
     .to(loader, { yPercent: -100, duration: reduced ? 0.01 : 1, ease: "expo.inOut" })
-    .from(".hero-gl", { scale: 1.25, opacity: 0, duration: 1.6, ease: "expo.out" }, "-=0.55")
+    .from(".hero-gl, .hero-bg", { opacity: 0, duration: 1.6, ease: "expo.out" }, "-=0.55")
     .to(".hero .mask > span", { y: 0, duration: 1.2, ease: "expo.out", stagger: 0.08 }, "-=1.4")
     .from(".nav", { yPercent: -100, opacity: 0, duration: 1, ease: "expo.out" }, "-=1")
     .add(() => loader.remove());
@@ -178,9 +184,9 @@
       clipPath: "inset(12% 8% 12% 8% round 24px)", duration: 1.4, ease: "expo.out",
       scrollTrigger: { trigger: p, start: "top 85%" },
     });
-    gsap.from(p.querySelectorAll(".project-info > *"), {
+    gsap.from(p.querySelectorAll(".project-bar, .project-head, .project-body > *"), {
       y: 40, opacity: 0, duration: 1, ease: "expo.out", stagger: 0.06,
-      scrollTrigger: { trigger: p.querySelector(".project-info"), start: "top 90%" },
+      scrollTrigger: { trigger: p, start: "top 90%" },
     });
     if (!reduced) {
       gsap.fromTo(media.querySelector("video"), { yPercent: -5 }, {
