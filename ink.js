@@ -1,10 +1,10 @@
-// Hero background: rows of "OONDRAA" sit as a faint outline. Moving the pointer leaves a trail that
+// Contact background: rows of "OONDRAA" sit as a faint outline. Moving the pointer leaves a trail that
 // reveals iridescent, refracted colour inside the letters, then slowly fades like ink.
 // Plain WebGL: a low-res trail buffer (ping-pong) and one composite pass over a mask of the letters.
 // Without WebGL the outline (CSS text-stroke) is all you see, which still reads fine.
 (function () {
-  const canvas = document.querySelector(".hero-gl");
-  const words = document.querySelector(".hero-bg");
+  const canvas = document.querySelector(".ink-gl");
+  const words = document.querySelector(".ink-bg");
   if (!canvas || !words) return;
   const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const coarse = window.matchMedia("(hover: none), (pointer: coarse)").matches;
@@ -57,10 +57,10 @@ float noise(vec2 p) {
   return mix(mix(hash(i), hash(i + vec2(1.0, 0.0)), f.x), mix(hash(i + vec2(0.0, 1.0)), hash(i + vec2(1.0, 1.0)), f.x), f.y);
 }
 
-// Oil-on-glass colours: deep blue, magenta, ember orange, cyan, looping.
+// Oil-on-glass colours, all in Ondra's blue family: deep navy, OZDIGITAL blue, sky, ice cyan, looping.
 vec3 iri(float x) {
   x = fract(x) * 4.0;
-  vec3 a = vec3(0.08, 0.16, 1.0), b = vec3(0.85, 0.08, 0.45), c = vec3(1.0, 0.36, 0.06), d = vec3(0.15, 0.75, 1.0);
+  vec3 a = vec3(0.05, 0.12, 0.55), b = vec3(0.09, 0.38, 0.94), c = vec3(0.16, 0.59, 1.0), d = vec3(0.55, 0.85, 1.0);
   return x < 1.0 ? mix(a, b, smoothstep(0.0, 1.0, x)) : x < 2.0 ? mix(b, c, smoothstep(1.0, 2.0, x))
        : x < 3.0 ? mix(c, d, smoothstep(2.0, 3.0, x)) : mix(d, a, smoothstep(3.0, 4.0, x));
 }
@@ -208,8 +208,8 @@ void main() {
     drawText();
   }
 
-  // Pointer, in hero uv (0..1, y up). When it's idle, or on touch screens, a virtual pointer
-  // wanders across the hero so the effect is never just sitting there unseen.
+  // Pointer, in canvas uv (0..1, y up). When it's idle, or on touch screens, a virtual pointer
+  // wanders across the section so the effect is never just sitting there unseen.
   const client = { x: -1, y: -1 };
   let lastMove = -1e9, tgt = { x: 0.2, y: 0.4 }, pos = { x: 0.2, y: 0.4 }, prev = { x: 0.2, y: 0.4 };
   window.addEventListener("pointermove", (e) => {

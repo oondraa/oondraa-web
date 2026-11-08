@@ -6,30 +6,22 @@
 
   /* ---------- Language ---------- */
   const EN = {
-    navWork: "Work", navLab: "In the lab", navAbout: "About", navTalk: "Say hi",
-    heroKicker: "Developer & designer · Hradec Králové",
+    navWork: "Work", navAbout: "About", navTalk: "Say hi",
     heroLede: "I build software I want to use myself.",
     heroScroll: "Scroll",
-    statement: "I'm Ondřej Zajíček, but online mostly oondraa. I run the OZDIGITAL studio and after hours I build my own things: apps for my classmates, music visualizers in Rust and a neural network that is learning to talk.",
-    aboutMeta: "I design and I code. From the idea through design to launch, mostly alone and mostly at night.",
-    aboutStudio: "Client websites live under OZDIGITAL",
+    statement: "I'm Ondřej Zajíček, but online mostly oondraa. I run the OZDIGITAL studio and after hours I build my own things.",
     workTitle: "Selected work",
     sisDesc: "My school in one app. Timetable with substitutions, grades with what you need on the next test, absences watched against the 30% limit, free classrooms, lunches, and a notification when the school rewrites the timetable at 3 a.m.",
     sisOpen: "Open the app ↗",
     sisNote: "Unofficial student project, not affiliated with the school or the SIS authors.",
-    ozbDesc: "A music visualizer for Windows. Cover art and artist photos as a moving background, lyrics synced line by line and visuals that breathe with the sound. Spotify, the browser and BluOS speakers. Also runs as a screensaver.",
+    ozbDesc: "Your music on the big screen. Lyrics word by word the moment they're sung, in styles like the lyric edits on your feed, over the official music video or the cover's colours. For Spotify, YouTube and BluOS speakers, on your monitor, on the TV or as a screensaver.",
     ozbDownload: "Download for Windows ↓",
     linkProject: "Project site ↗",
-    kindWeb: "Web app", kindDesktop: "Desktop app", kindSelfHosted: "Self-hosted service", kindUtil: "Windows utility",
-    tagSaver: "Screensaver", tagCharts: "Charts", tagUtil: "Utility",
-    slwDesc: "Your Wrapped every day, not just in December. Connects to Spotify and keeps your listening stats (top tracks, artists and genres) up to date all year. Runs on your own machine.",
-    adcDesc: "A small standalone Windows utility that changes the timestamps (created, modified, accessed) of Microsoft Access .accdb and .mdb databases.",
-    labTitle: "In the lab",
-    labLede: "What I'm working on now.",
-    llmName: "A neural network that isn't an LLM",
-    llmDesc: "My biggest project. A living neural network that learns to speak like a small child: by listening and repeating. No dataset, no classic training. Its learning runs on simulated brain chemistry and you can watch every neuron live.",
-    adeaDesc: "A hardware project built around microcontrollers. Details when it's ready.",
-    stateActive: "In progress", stateHw: "Hardware",
+    kindWeb: "Web app", kindDesktop: "Desktop app", kindWebWin: "Web + Windows",
+    tagSaver: "Screensaver",
+    hudDesc: "A glass island in the bottom-right corner of Windows that watches every Claude Code session. When one finishes, fails or asks for permission, a card slides up and you approve it right where you are.",
+    sosacDesc: "An unofficial client for Sosáč and Streamuj.tv. A clean interface, profiles for the whole family and your own watchlist. A web app for your phone and a Windows program in Rust, with no server of its own.",
+    sosacNote: "Unofficial project, not affiliated with Sosáč or Streamuj.tv.",
     contactKicker: "Got an idea, a job or just a question?",
     contactBig: "Say hi",
     cursorOpen: "Open", cursorMail: "Write",
@@ -112,7 +104,7 @@
     });
   }
 
-  /* ---------- Nav and cursor turn light over the dark hero and footer ---------- */
+  /* ---------- Nav and cursor turn light over the dark contact section ---------- */
   const darkNow = new Set();
   const darkIO = new IntersectionObserver((entries) => {
     entries.forEach((e) => (e.isIntersecting ? darkNow.add(e.target) : darkNow.delete(e.target)));
@@ -122,7 +114,7 @@
 
   /* ---------- Nav hides on the way down, returns on the way up ---------- */
   const nav = document.querySelector(".nav");
-  document.querySelectorAll(".hero, .contact").forEach((s) => darkIO.observe(s));
+  darkIO.observe(document.querySelector(".contact"));
   let lastY = 0;
   window.addEventListener("scroll", () => {
     const yNow = window.scrollY;
@@ -143,6 +135,7 @@
   let lenis = null;
   if (!reduced && window.Lenis) {
     lenis = new Lenis({ lerp: 0.1 });
+    window.__lenis = lenis;
     lenis.on("scroll", ScrollTrigger.update);
     gsap.ticker.add((t) => lenis.raf(t * 1000));
     gsap.ticker.lagSmoothing(0);
@@ -163,8 +156,8 @@
   intro
     .to(counter, { v: 100, duration: reduced ? 0.01 : 1.1, ease: "power2.inOut", onUpdate: () => { num.textContent = Math.round(counter.v); } })
     .to(loader, { yPercent: -100, duration: reduced ? 0.01 : 1, ease: "expo.inOut" })
-    .from(".hero-gl, .hero-bg", { opacity: 0, duration: 1.6, ease: "expo.out" }, "-=0.55")
-    .to(".hero .mask > span", { y: 0, duration: 1.2, ease: "expo.out", stagger: 0.08 }, "-=1.4")
+    .to(".hero .mask > span", { y: 0, duration: 1.2, ease: "expo.out", stagger: 0.08 }, "-=0.5")
+    .add(() => window.dispatchEvent(new Event("hero:intro")), "-=0.9")
     .from(".nav", { yPercent: -100, opacity: 0, duration: 1, ease: "expo.out" }, "-=1")
     .add(() => loader.remove());
   const go = () => intro.play();
@@ -189,21 +182,11 @@
       scrollTrigger: { trigger: p, start: "top 90%" },
     });
     if (!reduced) {
-      gsap.fromTo(media.querySelector("video"), { yPercent: -5 }, {
+      gsap.fromTo(media.firstElementChild, { yPercent: -5 }, {
         yPercent: 5, ease: "none",
         scrollTrigger: { trigger: media, start: "top bottom", end: "bottom top", scrub: true },
       });
     }
-  });
-
-  gsap.from(".lab-row", {
-    y: 30, opacity: 0, duration: 0.9, ease: "expo.out", stagger: 0.08,
-    scrollTrigger: { trigger: ".lab-list", start: "top 85%" },
-  });
-
-  gsap.from(".statement-meta", {
-    y: 40, opacity: 0, duration: 1, ease: "expo.out",
-    scrollTrigger: { trigger: ".statement-meta", start: "top 90%" },
   });
 
   /* ---------- Marquee: drifts on its own, speeds up with scroll ---------- */
@@ -220,9 +203,8 @@
     });
   }
 
-  /* ---------- Footer word rises into place ---------- */
-  gsap.from(".contact-word", {
-    yPercent: 40, ease: "none",
-    scrollTrigger: { trigger: ".contact", start: "top bottom", end: "bottom bottom", scrub: true },
+  gsap.from(".contact-kicker, .contact-mail, .contact-foot", {
+    y: 30, opacity: 0, duration: 1, ease: "expo.out", stagger: 0.08,
+    scrollTrigger: { trigger: ".contact-big", start: "top 85%" },
   });
 })();
