@@ -1,0 +1,25 @@
+# oondraa
+
+> Personal site of Ondřej Zajíček, online "oondraa": a developer and designer from Hradec Králové, Czech Republic. Lists his personal projects and links to OZDIGITAL, the team brand he runs.
+
+## Who
+
+- **Ondřej Zajíček** (also written Ondrej Zajicek), username **oondraa** on GitHub and elsewhere. Developer and UI/UX designer from Hradec Králové.
+- Site: https://oondraa.pages.dev/ · GitHub: https://github.com/oondraa
+
+## Personal projects (made by Ondřej on his own, not OZDIGITAL work)
+
+- **OpenSISAKHK**: unofficial student app for the SIS (KybernaIS) system of Kyberna, SŠ a VOŠ aplikované kybernetiky Hradec Králové. Timetable with substitutions, grades, absences, lunches, free classrooms. Site: https://oondraa.github.io/OpenSISAKHK/ · Code: https://github.com/oondraa/OpenSISAKHK. Not affiliated with the school.
+- **OZBEAT**: word-by-word synced lyrics over music videos for Spotify, YouTube and BluOS, as a Windows app and screensaver. https://oondraa.github.io/OZBEAT/
+- **ClaudeHUD**: Windows overlay that watches Claude Code sessions. https://oondraa.github.io/ClaudeHUD/
+- **OpenSosacTV**: unofficial client for Sosáč and Streamuj.tv, web and Windows. https://oondraa.github.io/OpenSosacTV/
+
+## OZDIGITAL
+
+- **OZDIGITAL** is a brand of three developers (Ondřej Zajíček, Adam Bukač, Tomáš Dotzauer) that builds websites, web apps and automation to order. Site: https://ozdigital.pages.dev/
+- It is a brand, not a separate company. Contracts and invoicing are handled by **myNEST s.r.o.**, IČO 28855884, Hradec Králové.
+- The personal projects above are not OZDIGITAL products.
+
+## Not to be confused with
+
+- "Ondra" SPO 186, a Czechoslovak 8-bit computer from 1985. Unrelated.

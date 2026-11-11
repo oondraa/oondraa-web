@@ -11,7 +11,7 @@
     heroScroll: "Scroll",
     statement: "I'm Ondřej Zajíček, but online mostly oondraa. I run the OZDIGITAL studio and after hours I build my own things.",
     forkTeamKicker: "Looking for OZDIGITAL?",
-    forkTeamSub: "Our team, websites and apps made to order. Continue to ozdigital.pages.dev",
+    forkTeamSub: "Our team brand for websites and apps made to order. Continue to ozdigital.pages.dev",
     forkMeKicker: "Looking for me?",
     forkMeTitle: "My projects",
     forkMeSub: "Personal portfolio, apps and things I build after hours.",
