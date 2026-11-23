@@ -258,14 +258,12 @@ html:not(.js) .statement-text .w { opacity: 1; }
 .soon-n { padding-top: 10px; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; color: var(--accent); }
 .soon-head { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
 .soon-head h3 { font-size: clamp(26px, 2.6vw, 40px); font-weight: 600; letter-spacing: -0.04em; line-height: 1.05; }
-.soon-secret { color: var(--muted); font-style: italic; }
 .soon-tag {
   font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted);
   border: 1px solid var(--line); border-radius: 999px; padding: 5px 11px;
 }
 .soon-body { display: grid; gap: 14px; align-content: start; padding-top: 6px; }
 .soon-body > p { color: var(--muted); max-width: 56ch; }
-.soon-body > .soon-extra { color: var(--ink); }
 .soon-note { display: flex; gap: 10px; align-items: baseline; max-width: 52ch; font-size: 15px; color: var(--ink); }
 .soon-dot { flex: none; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); translate: 0 -1px; }
 @media (max-width: 760px) {
