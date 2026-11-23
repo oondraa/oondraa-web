@@ -4,8 +4,8 @@
 
 ## Who
 
-- **Ondřej Zajíček** (also written Ondrej Zajicek), username **oondraa** on GitHub and elsewhere. Developer and UI/UX designer from Hradec Králové.
-- Site: https://oondraa.pages.dev/ · GitHub: https://github.com/oondraa · Instagram: https://www.instagram.com/oondraa.md/ (@oondraa.md) · LinkedIn: https://www.linkedin.com/in/oondraa/
+- **Ondřej Zajíček** (also written Ondrej Zajicek), username **oondraa** on GitHub, LinkedIn and Ko-fi, **@oondraa.md** on Instagram. Student at SSAK (Střední škola aplikované kybernetiky) in Hradec Králové, developer and UI/UX designer, and leads the OZDIGITAL brand.
+- Site: https://oondraa.pages.dev/ · GitHub: https://github.com/oondraa · Instagram: https://www.instagram.com/oondraa.md/ (@oondraa.md) · LinkedIn: https://www.linkedin.com/in/oondraa/ · Ko-fi: https://ko-fi.com/oondraa
 
 ## Personal projects (made by Ondřej on his own, not OZDIGITAL work)
 
@@ -13,6 +13,14 @@
 - **OZBEAT**: word-by-word synced lyrics over music videos for Spotify, YouTube and BluOS, as a Windows app and screensaver. https://oondraa.github.io/OZBEAT/
 - **ClaudeHUD**: Windows overlay that watches Claude Code sessions. https://oondraa.github.io/ClaudeHUD/
 - **OpenSosacTV**: unofficial client for Sosáč and Streamuj.tv, web and Windows. https://oondraa.github.io/OpenSosacTV/
+
+## Coming soon
+
+- **ESPDeck**: hardware + software project, details not public yet. Will be his first published hardware project.
+- **OpenŠtudent**: like OpenSISAKHK, but for every school in Hradec Králové.
+- **Vakua**: a small, fast, minimalist web browser for Windows.
+- **OZFileManager**: a minimalist file manager for Windows with instant previews, light on RAM.
+- **OZBEAT** big update: direct Spotify API integration with full playback control.
 
 ## OZDIGITAL
 
