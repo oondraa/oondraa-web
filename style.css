@@ -248,6 +248,55 @@ html:not(.js) .statement-text .w { opacity: 1; }
   .project:nth-child(even) { margin-top: 0; }
 }
 
+/* On the way: upcoming projects as numbered rows, text only */
+.soon { padding-bottom: clamp(64px, 10vw, 140px); }
+.soon-list { list-style: none; margin: 0; padding: 0 var(--gutter); border-top: 1px solid var(--line); }
+.soon-item {
+  display: grid; grid-template-columns: 64px minmax(0, 5fr) minmax(0, 7fr); gap: 16px clamp(16px, 2.4vw, 32px);
+  padding: clamp(24px, 3vw, 40px) 0; border-bottom: 1px solid var(--line);
+}
+.soon-n { padding-top: 10px; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; color: var(--accent); }
+.soon-head { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
+.soon-head h3 { font-size: clamp(26px, 2.6vw, 40px); font-weight: 600; letter-spacing: -0.04em; line-height: 1.05; }
+.soon-secret { color: var(--muted); font-style: italic; }
+.soon-tag {
+  font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted);
+  border: 1px solid var(--line); border-radius: 999px; padding: 5px 11px;
+}
+.soon-body { display: grid; gap: 14px; align-content: start; padding-top: 6px; }
+.soon-body > p { color: var(--muted); max-width: 56ch; }
+.soon-body > .soon-extra { color: var(--ink); }
+.soon-note { display: flex; gap: 10px; align-items: baseline; max-width: 52ch; font-size: 15px; color: var(--ink); }
+.soon-dot { flex: none; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); translate: 0 -1px; }
+@media (max-width: 760px) {
+  .soon-item { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+  .soon-n { padding-top: 0; }
+}
+
+/* Support: a full-width accent block pointing to Ko-fi */
+.support { padding: 0 var(--gutter) clamp(64px, 10vw, 140px); }
+.support-inner {
+  position: relative; overflow: hidden;
+  display: grid; justify-items: start; gap: clamp(16px, 2vw, 28px);
+  padding: clamp(40px, 7vw, 120px) clamp(24px, 6vw, 96px);
+  border-radius: clamp(20px, 2.4vw, 36px);
+  background: var(--accent); color: #fff;
+}
+.support-inner::after {
+  content: "☕"; position: absolute; right: clamp(-20px, 2vw, 40px); bottom: clamp(-40px, -2vw, -10px);
+  font-size: clamp(160px, 26vw, 420px); line-height: 1; opacity: 0.14; filter: grayscale(1) brightness(3); pointer-events: none;
+}
+.support-kicker { font-size: 13px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.8; }
+.support-title { font-size: clamp(48px, 9vw, 152px); font-weight: 600; letter-spacing: -0.06em; line-height: 0.9; }
+.support-text { max-width: 52ch; font-size: clamp(16px, 1.4vw, 19px); opacity: 0.9; position: relative; z-index: 1; }
+.support-btn {
+  position: relative; z-index: 1;
+  display: inline-flex; align-items: center; gap: 10px; margin-top: 8px;
+  padding: 16px 28px; border-radius: 999px; background: #fff; color: var(--accent);
+  font-size: 17px; font-weight: 600; transition: background 0.3s, color 0.3s, transform 0.3s var(--ease);
+}
+.support-btn:hover { background: var(--night); color: #fff; transform: translateY(-2px); }
+
 /* Marquee */
 .marquee { overflow: hidden; padding: clamp(24px, 4vw, 56px) 0; border-block: 1px solid var(--line); }
 .marquee-track { display: flex; width: max-content; font-size: clamp(56px, 10vw, 168px); font-weight: 600; letter-spacing: -0.06em; line-height: 1; white-space: nowrap; }

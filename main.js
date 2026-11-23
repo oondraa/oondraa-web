@@ -27,6 +27,20 @@
     hudDesc: "A glass island in the bottom-right corner of Windows that watches every Claude Code session. When one finishes, fails or asks for permission, a card slides up and you approve it right where you are.",
     sosacDesc: "An unofficial client for Sosáč and Streamuj.tv. A clean interface, profiles for the whole family and your own watchlist. A web app for your phone and a Windows program in Rust, with no server of its own.",
     sosacNote: "Unofficial project, not affiliated with Sosáč or Streamuj.tv.",
+    ozbNext: "A big update is on the way: hooked straight into the Spotify API with full music control, not just play and pause.",
+    soonTitle: "On the way",
+    soonLede: "What's coming soon",
+    soonTagHw: "Hardware + software", soonTagWeb: "Web app", soonTagDesktop: "Desktop app",
+    espDesc: "A control deck on an ESP32-S3 with an OLED display, six touch pads and a rotary knob. On its own it shows the time and controls the speaker and lights; with the PC app it fires keyboard shortcuts and shows what's playing.",
+    espHw: "My first project that isn't just software. I'll most likely publish the hardware too: printable case models, wiring and a parts list, so anyone can build it 1:1.",
+    stuDesc: "OpenSISAKHK for every school in Hradec Králové. Your class timetable with substitutions, lunches and how busy the canteen is, free classrooms, tests shared with your class and SideQuests around town. Just an e-mail, then pick your school and class.",
+    vakDesc: "A small, quiet browser for Windows. Tabs down the side, the page as a card and a single field. Rust and WebView2, under 1 MB.",
+    fmTitle: "No name yet",
+    fmDesc: "A file manager you drive like a command line, just with arrow keys. The folder on the left, an instant preview of whatever you're on to the right: images, PDFs, code and documents. No mouse, no waiting.",
+    supKicker: "Ko-fi",
+    supTitle: "Support me",
+    supText: "Everything you see here is free and built after hours. If any of it helped you or made you smile, you can support me on Ko-fi. Every tip goes into further development and parts for new projects.",
+    supBtn: "Support on Ko-fi",
     contactKicker: "Got an idea, a job or just a question?",
     contactBig: "Say hi",
     cursorOpen: "Open", cursorMail: "Write",
@@ -170,7 +184,7 @@
   setTimeout(go, 2500);
 
   /* ---------- Scroll reveals ---------- */
-  document.querySelectorAll("main .sec-title .mask > span, .contact .mask > span").forEach((el) => {
+  document.querySelectorAll("main .sec-title .mask > span, .support .mask > span, .contact .mask > span").forEach((el) => {
     gsap.to(el, { y: 0, duration: 1.2, ease: "expo.out", scrollTrigger: { trigger: el.parentElement, start: "top 88%" } });
   });
 
