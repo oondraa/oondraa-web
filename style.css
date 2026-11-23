@@ -330,8 +330,44 @@ html:not(.js) .statement-text .w { opacity: 1; }
 .contact-mail { display: inline-block; margin-top: 28px; font-size: clamp(18px, 2vw, 26px); border-bottom: 1px solid rgba(241, 241, 243, 0.25); padding-bottom: 2px; }
 .contact-mail:hover { color: var(--accent-dark); border-color: var(--accent-dark); }
 .contact-foot { align-self: stretch; display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; margin-top: clamp(48px, 7vw, 96px); padding: 20px 0; border-top: 1px solid rgba(241, 241, 243, 0.14); }
-.socials { display: flex; gap: 24px; list-style: none; margin: 0; padding: 0; }
-.socials a:hover { color: var(--accent-dark); }
+@font-face { font-family: "PhSocial"; src: url("assets/icons/phosphor-social.woff2") format("woff2"); font-display: block; }
+.ph { font-family: "PhSocial" !important; font-style: normal; font-weight: normal; line-height: 1; speak: never; -webkit-font-smoothing: antialiased; }
+.ph-github-logo::before { content: "\e576"; }
+.ph-linkedin-logo::before { content: "\e2ee"; }
+.ph-instagram-logo::before { content: "\e2d0"; }
+.ph-coffee::before { content: "\e1c2"; }
+.ph-globe-simple::before { content: "\e28e"; }
+.ph-envelope-simple::before { content: "\e218"; }
+
+/* Footer socials: big icon tiles, Instagram first and highlighted */
+.socials {
+  flex: 1 1 100%; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 12px;
+  list-style: none; margin: 0 0 8px; padding: 0;
+}
+.social {
+  display: flex; align-items: center; gap: 14px; height: 100%;
+  padding: 16px 18px; border-radius: 18px;
+  background: rgba(241, 241, 243, 0.06); border: 1px solid rgba(241, 241, 243, 0.12);
+  transition: background 0.3s, border-color 0.3s, transform 0.3s var(--ease);
+}
+.social .ph { flex: none; display: grid; place-items: center; width: 48px; height: 48px; border-radius: 14px; background: rgba(241, 241, 243, 0.1); font-size: 26px; }
+.social span { display: grid; gap: 2px; min-width: 0; }
+.social b { font-size: 17px; font-weight: 600; }
+.social small { font-size: 13px; color: #a3a3ad; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.social:hover { background: rgba(241, 241, 243, 0.12); border-color: rgba(241, 241, 243, 0.3); transform: translateY(-2px); }
+/* Each tile in its brand colour so it reads on the dark footer */
+.social { color: #fff; border-color: transparent; }
+.social .ph { background: rgba(255, 255, 255, 0.2); }
+.social small { color: rgba(255, 255, 255, 0.85); }
+.social:hover { border-color: transparent; filter: brightness(1.1); }
+.social-ig, .social-ig:hover { background: linear-gradient(135deg, #f9ce34 0%, #ee2a7b 50%, #6228d7 100%); }
+.social-gh, .social-gh:hover { background: #f0f6fc; color: #1f2328; }
+.social-gh .ph { background: rgba(31, 35, 40, 0.1); }
+.social-gh small { color: #59636e; }
+.social-li, .social-li:hover { background: #0a66c2; }
+.social-oz, .social-oz:hover { background: #1760f0; }
+.social-kofi, .social-kofi:hover { background: #ff5e5b; }
+.social-mail, .social-mail:hover { background: #12a150; }
 .copy { font-size: 13px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #8d8d97; }
 
 @media (prefers-reduced-motion: reduce) {
